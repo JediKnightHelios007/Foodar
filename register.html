@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<style>
+label {
+    vertical-align: top;
+    padding-right: 10px;
+}
+input {
+    vertical-align: bottom;
+}
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+
+</style>
+
+<body>
+<h1>Foodar</h1>
+<h2>Register</h2>
+<p>Please fill out the form below:</p>
+<br>
+<div class = "form1">
+<form>
+	<fieldset>
+	<legend> Details:</legend>
+ 
+<label for="email" />Email: </label>
+  <input type="email" name="Email" placeholder="Email:">
+ <br>
+ <label for="password" />Password:</label>
+  <input type="password" name="Password" placeholder="Password:">
+  <br>
+  <label for="firstname" />First Name:</label>
+  <input type="text" name="Firstname" placeholder="First name:">
+  <br>
+  <label for="lastname" />Last Name:</label>
+  <input type="text" name="Lastname" placeholder="Last name:">
+  </fieldset>
+<br>
+  	<fieldset>
+	<legend> Address:</legend>
+  <label for="address" />Address:</label>
+        <input id="address" name="address-1" type="text" />
+        <br/>
+	<label for="street" />Street:</label>
+        <input id="street" name="address-2" type="text" />
+        <br/>
+        <label for="city" />City:</label>
+        <input id="city" name="address-3" type="text" />
+        <br/>
+        <label for="zipcode" />Zipcode:</label>
+        <input id="zipcode" name="address-4" type="text" maxlength="5"/>
+  </fieldset>
+  <br>
+  <input type="submit" value="Register" />
+</form>
+</div>
+<footer>
+  <div class="container">
+   <div class="column-center">
+    <a href="www.google.com">Privacy Policy</a>
+    <a href="www.yahoo.com">Terms & Conditions</a>
+   </div>
+   <div class="column-left">
+    <a href="index.html">Homepage</a>
+    <a href="about.html">About Me</a>
+    <a href="register.html">Register</a>
+   </div>
+   <div class="column-right">Cooking is a gift from the gods. Spices are a gift from the devil. Looks like it was a little too spicy for you.</div>
+</div>
+</footer>
+</body>
+</html>
