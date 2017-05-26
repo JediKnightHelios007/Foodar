@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Request</title>
+  <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+</head>
+<style>
+#address {
+    text-indent: 50px;
+}
+#address2 {
+    text-indent: 100px;
+}
+#input {
+	border-style: solid;
+	border-width: 5px;
+}
+</style>
+<body>
+<h1>Submit your Request</h1>
+<h3>Please fill out the form below.</h3>
+<h3 id = "address">Address:</h3>
+<form id = "address2">
+  <input type="email" name="email" placeholder="Email">
+</form>
+
+<h3 id = "address">Choose Your Style:</h3>
+
+<form id = "form1">
+  <input type="radio" name="CYS" value="classic" checked> Classic is a classic treatment
+  <input id = "input" type="radio" name="CHY" value="premium"> Premium pinky's up
+  <input id = "input" type="radio" name="CHY" value="royal"> Royal. Your food is served on a silver platter. Literally. 
+</form> 
+
+
+<h3 id = "address">Restaurant:</h3>
+<form id = "address2">
+  <input type="text" name="email" placeholder="Name">
+</form>
+<h3 id = "address">Tip:</h3>
+<form>
+  <input type="radio" name="Tip" value="10"> 10% They did their job.
+  <input type="radio" name="Tip" value="15"> 15% They made you fell special.
+  <input type="radio" name="Tip" value="20"> 20% I wanna give them more, but this is all I have!</form> 
+
+<button onclick="myFunction()">Try it</button>
+<p id="demo"> </p>
+<center><h1>Total:</h1></center>
+
+<center><form><input type="submit" value="Request"></form></center>
+<script>
+function myFunction() {
+    var x = document.getElementById("form1").name;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+</html>
