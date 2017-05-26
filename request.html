@@ -6,6 +6,9 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 </head>
 <style>
+body{
+  background-color: lightblue;
+}
 #address {
     text-indent: 50px;
 }
@@ -20,7 +23,7 @@
 <body>
 <h1>Submit your Request</h1>
 <h3>Please fill out the form below.</h3>
-<h3 id = "address">Address:</h3>
+<h3 id = "address">Email Address:</h3>
 <form id = "address2">
   <input type="email" name="email" placeholder="Email">
 </form>
@@ -28,32 +31,102 @@
 <h3 id = "address">Choose Your Style:</h3>
 
 <form id = "form1">
-  <input type="radio" name="CYS" value="classic" checked> Classic is a classic treatment
-  <input id = "input" type="radio" name="CHY" value="premium"> Premium pinky's up
-  <input id = "input" type="radio" name="CHY" value="royal"> Royal. Your food is served on a silver platter. Literally. 
+  <input type="radio" name="CHY" value="classic" > Classic is a classic treatment
+  <input type="radio" name="CHY" value="premium"> Premium pinky's up
+  <input type="radio" name="CHY" value="royal"> Royal. Your food is served on a silver platter. Literally. 
 </form> 
-
 
 <h3 id = "address">Restaurant:</h3>
 <form id = "address2">
   <input type="text" name="email" placeholder="Name">
 </form>
 <h3 id = "address">Tip:</h3>
-<form>
+<form id= "form2">
   <input type="radio" name="Tip" value="10"> 10% They did their job.
   <input type="radio" name="Tip" value="15"> 15% They made you fell special.
-  <input type="radio" name="Tip" value="20"> 20% I wanna give them more, but this is all I have!</form> 
+  <input type="radio" name="Tip" value="20"> 20% I wanna give them more, but this is all I have!
+</form> 
+<br>
+<center><p id = "demo"></p></center>
 
-<button onclick="myFunction()">Try it</button>
-<p id="demo"> </p>
-<center><h1>Total:</h1></center>
+<!-- <center><form><input type="submit" value="Request"></form></center> -->
+<br>
+<center><button type="button" onclick="calculateTotal()">Request</button></center>
 
-<center><form><input type="submit" value="Request"></form></center>
 <script>
-function myFunction() {
-    var x = document.getElementById("form1").name;
-    document.getElementById("demo").innerHTML = x;
+
+var food_type = new Array();
+food_type["classic"]=3;
+food_type["premium"]=5;
+food_type["royal"]=10;
+
+var tip = new Array();
+tip["10"]=0.10;
+tip["15"]=0.15;
+tip["20"]=0.20;
+
+
+function getFoodPrice()
+{
+var foodPrice=0;
+
+var theForm = document.forms["form1"];
+
+var selectedFoodar = theForm.elements["CHY"];
+
+for(var i = 0; i < selectedFoodar.length; i++)
+{
+
+if(selectedFoodar[i].checked)
+{
+
+foodPrice = food_type[selectedFoodar[i].value];
+
+break;
 }
+}
+
+return foodPrice;
+}
+
+function getTip()
+{
+var tipPrice=0;
+
+var theForm = document.forms["form2"];
+
+var tipFoodar = theForm.elements["Tip"];
+
+for(var i = 0; i < tipFoodar.length; i++)
+{
+
+if(tipFoodar[i].checked)
+{
+
+tipPrice = tip[tipFoodar[i].value];
+
+break;
+}
+}
+
+return tipPrice;
+}
+
+function calculateTotal()
+{
+
+var foodPrice = getFoodPrice();
+var tipPrice = getTip();
+var total = 0;
+var total = foodPrice + (foodPrice * tipPrice);
+//display the result
+console.log(foodPrice);
+console.log(tipPrice);
+
+document.getElementById('demo').innerHTML = "Total: $" + total;
+
+}
+
 </script>
 </body>
 </html>
