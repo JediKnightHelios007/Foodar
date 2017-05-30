@@ -28,10 +28,39 @@ h3.middle{
 .column-right{ float: right; width: 33%; }
 .column-center{ display: inline-block; width: 33%; }
 
+.topright {
+    position: absolute;
+    top: 40px;
+    right: 16px;
+    font-size: 18px;
+}
 
+#footer > p:first-child {
+    float: left;
+    text-align: left;
+    width: 33.3%; 
+  background-color: grey;}
+
+#footer > p:nth-child(2) {
+    float: left;
+    text-align: center;
+    width: 33.4%;
+    background-color: grey; }
+
+#footer > p:last-child {
+    float: right;
+    text-align: right;
+    width: 33.3%; 
+   background-color: grey;}
 
 </style>
 <body>
+
+<header><a href="index.html"><img src="logo.png" alt="Foodar Logo";></a>
+
+ <div class="topright"><a href="register.html">Sign-in / Register / </a><a href="request.html">Request</a>
+ </div></header>
+
 <h1>Foodar</h1>
 
 <center><h1>How It Works!</h1></center>
@@ -49,17 +78,10 @@ h3.middle{
 <center><p>Beofre any request is submitted, you have the chance to review it and make any changes or cancellations.</p></center>
 
 <footer>
-  <div class="container">
-   <div class="column-center">
-   	<a href="www.google.com">Privacy Policy</a>
-   	<a href="www.yahoo.com">Terms & Conditions</a>
-   </div>
-   <div class="column-left">
-    <a href="index.html">Homepage</a>
-   	<a href="about.html">About Me</a>
-   	<a href="register.html">Register</a>
-   </div>
-   <div class="column-right">Cooking is a gift from the gods. Spices are a gift from the devil. Looks like it was a little too spicy for you.</div>
+<div id="footer">
+    <p>Site Map<br /> <a href="index.html">Homepage</a><br /><a href="about.html">About Me</a><br /><a href="register.html">Register</a></p>
+    <p><a href="www.google.com">Privacy Policy</a><br /> <a href="www.yahoo.com">Terms  Conditions</a> <br /> <br /> <br />  </p>
+    <p>Cooking is a gift from the gods.<br />  Spices are a gift from the devil. <br/>Looks like it was a little too spicy for you. <br /> <br />  </p>
 </div>
 </footer>
 

@@ -19,8 +19,37 @@ body{
 	border-style: solid;
 	border-width: 5px;
 }
+.topright {
+    position: absolute;
+    top: 40px;
+    right: 16px;
+    font-size: 18px;
+}
+
+#footer > p:first-child {
+    float: left;
+    text-align: left;
+    width: 33.3%; 
+  background-color: grey;}
+
+#footer > p:nth-child(2) {
+    float: left;
+    text-align: center;
+    width: 33.4%;
+    background-color: grey; }
+
+#footer > p:last-child {
+    float: right;
+    text-align: right;
+    width: 33.3%; 
+   background-color: grey;}
+
 </style>
 <body>
+<header><a href="index.html"><img src="logo.png" alt="Foodar Logo";></a>
+
+ <div class="topright"><a href="register.html">Sign-in / Register / </a><a href="request.html">Request</a>
+ </div></header>
 <h1>Submit your Request</h1>
 <h3>Please fill out the form below.</h3>
 <h3 id = "address">Email Address:</h3>
@@ -52,6 +81,14 @@ body{
 <!-- <center><form><input type="submit" value="Request"></form></center> -->
 <br>
 <center><button type="button" onclick="calculateTotal()">Request</button></center>
+
+<footer>
+<div id="footer">
+    <p>Site Map<br /> <a href="index.html">Homepage</a><br /><a href="about.html">About Me</a><br /><a href="register.html">Register</a></p>
+    <p><a href="www.google.com">Privacy Policy</a><br /> <a href="www.yahoo.com">Terms  Conditions</a> <br /> <br /> <br />  </p>
+    <p>Cooking is a gift from the gods.<br />  Spices are a gift from the devil. <br/>Looks like it was a little too spicy for you. <br /> <br />  </p>
+</div>
+</footer>
 
 <script>
 
